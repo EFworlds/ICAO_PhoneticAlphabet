@@ -43,8 +43,10 @@ function symbol2codeWord(){
     let resultTxt = ' ';  
 
     for( let i = 0; i < arrSymbol.length; i++){
-       resultTxt += SpellingAlphabet.get(arrSymbol[i]);
-       resultTxt += ' ';
+       if(arrSymbol[i] >= 'A' && arrSymbol[i] <= 'Z'  || arrSymbol[i] >= "0" && arrSymbol[i] <= '9'){
+            resultTxt += SpellingAlphabet.get(arrSymbol[i]);
+            resultTxt += ' ';
+        }
     }    
   
     document.getElementById("spellingText").innerHTML = resultTxt;
